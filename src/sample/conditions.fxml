@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="830.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ConditionController">
+   <children>
+      <Text layoutX="91.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="     Электростатическое поле создано равномерно заряженным шаром R=100 см. Установив значения объемной плотности заряда и диэлектрической проницаемости среды и выбрав две точки, находящиеся внутри шара, рассчитать разность потенциалов между этими точками." wrappingWidth="835.703125">
+         <font>
+            <Font name="Bookman Old Style" size="27.0" />
+         </font>
+      </Text>
+      <Button layoutX="65.0" layoutY="84.0" mnemonicParsing="false" onMouseClicked="#makeFirstProblem" prefHeight="40.0" prefWidth="67.0" text="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="65.0" layoutY="384.0" mnemonicParsing="false" onMouseClicked="#makeSecondProblem" prefHeight="40.0" prefWidth="67.0" text="2">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Text layoutX="99.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="     Установив радиусы центральной жилы коаксиального кабеля,внутреннего радиуса оболочки, разность потенциалов между ними и указав расстояние от оси кабеля, рассчитать напряженность электрического поля на этом расстоянии." wrappingWidth="860.67919921875">
+         <font>
+            <Font name="Bookman Old Style" size="27.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
