@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
@@ -31,14 +32,15 @@ public class secondController implements Initializable {
     public Circle smallCircle;
     public Circle bigCircle;
     public Label secondAnswer;
+  public ImageView formula;
 
 
-    public void initialiseSmall() {
-        smallCircle.radiusProperty().bind(radiusSmall.valueProperty().multiply(10));
+  public void initialiseSmall() {
+        smallCircle.radiusProperty().bind(radiusSmall.valueProperty().multiply(5));
     }
 
     public void initialiseBig() {
-        bigCircle.radiusProperty().bind(radiusBig.valueProperty().multiply(10));
+        bigCircle.radiusProperty().bind(radiusBig.valueProperty().multiply(5));
     }
 
     double distance;
@@ -47,7 +49,7 @@ public class secondController implements Initializable {
         double radius = ((Circle) mouseEvent.getSource()).getRadius();
 
         Point2D point = new Point2D(mouseEvent.getX(), mouseEvent.getY());
-        distance = point.distance(Point2D.ZERO) / 9.5;
+        distance = point.distance(Point2D.ZERO) / 4.95;
         chosenDistance.setText(String.format("%.2f", distance));
 
     }
@@ -66,6 +68,7 @@ public class secondController implements Initializable {
         double r2 = radiusBig.getValue() / 1000;
         double d = distance / 1000;
         double E = U / (d * Math.log(r2 / r1));
+        formula.setVisible(true);
         secondAnswer.setText(String.format("%.2f", E));
     }
 

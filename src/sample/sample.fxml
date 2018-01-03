@@ -21,80 +21,94 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Pane prefHeight="830.0" prefWidth="1299.0">
+      <Pane prefHeight="825.0" prefWidth="1299.0">
          <children>
-            <Circle fill="#e1e3e5" layoutX="242.0" layoutY="396.0" onMouseClicked="#circleClicked" radius="213.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="6.0" />
-            <Label layoutX="484.0" layoutY="174.0" text="Объемная плотность заряда, нКл/м^3">
+            <ImageView fitHeight="859.0" fitWidth="1299.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Безымянный1.png" />
+               </image>
+            </ImageView>
+            <Circle fill="#e1e3e5" layoutX="239.0" layoutY="290.0"  radius="170.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="6.0" />
+            <Label layoutX="477.0" layoutY="157.0" text="Объемная плотность заряда, нКл/м^3, p">
                <font>
                   <Font name="Bookman Old Style" size="23.0" />
                </font>
             </Label>
-            <Slider fx:id="plotnostZaryada" layoutX="953.0" layoutY="193.0" min="-100.0" minorTickCount="2" prefHeight="17.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="10.0" />
-            <Slider fx:id="dielectrPronits" layoutX="953.0" layoutY="92.0" prefHeight="17.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="7.0" />
-            <Label layoutX="522.0" layoutY="77.0" text="Диэлектрическая проницаемость">
+            <Slider fx:id="plotnostZaryada" layoutX="979.0" layoutY="162.0" min="-100.0" minorTickCount="2" prefHeight="17.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="10.0" />
+            <Slider fx:id="dielectrPronits" layoutX="979.0" layoutY="93.0" prefHeight="17.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="7.0" />
+            <Label layoutX="504.0" layoutY="78.0" text="Диэлектрическая проницаемость, E">
                <font>
                   <Font name="Bookman Old Style" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="firstDistLabel" layoutX="1058.0" layoutY="309.0" prefHeight="42.0" prefWidth="89.0" style="-fx-border-color: #000;">
-               <font>
-                  <Font size="28.0" />
-               </font></Label>
-            <Label fx:id="secondDistLabel" layoutX="1058.0" layoutY="388.0" prefHeight="45.0" prefWidth="89.0" style="-fx-border-color: #000;">
-               <font>
-                  <Font size="29.0" />
-               </font></Label>
-            <Label layoutX="571.0" layoutY="318.0" text="Расстояние от центра до первой точки, см">
+            <Label layoutX="571.0" layoutY="239.0" text="Расстояние от центра до первой точки, см">
                <font>
                   <Font name="Bookman Old Style" size="21.0" />
                </font>
             </Label>
-            <Label layoutX="572.0" layoutY="397.0" text="Расстояние от центра до второй точки, см">
+            <Label layoutX="572.0" layoutY="320.0" text="Расстояние от центра до второй точки, см">
                <font>
                   <Font name="Bookman Old Style" size="21.0" />
                </font>
             </Label>
-            <ImageView fitHeight="28.0" fitWidth="212.0" layoutX="242.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@/img/ruler.png" />
-               </image>
-            </ImageView>
-            <Circle layoutX="245.0" layoutY="394.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
-            <Text layoutX="241.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+            <Circle layoutX="242.0" layoutY="290.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+            <Text layoutX="237.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="335.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50" wrappingWidth="26.255859375">
+            <Text layoutX="312.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50" wrappingWidth="26.255859375">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Text>
-            <Text layoutX="416.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="см">
+            <Text layoutX="375.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="см">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Text>
-            <Label fx:id="answer" layoutX="979.0" layoutY="622.0" prefHeight="60.0" prefWidth="127.0" style="-fx-border-color: #000;">
+            <Label fx:id="answer" layoutX="674.0" layoutY="658.0" prefHeight="60.0" prefWidth="127.0" style="-fx-border-color: #000;">
                <font>
                   <Font size="34.0" />
                </font>
             </Label>
-            <Label layoutX="1113.0" layoutY="616.0" prefHeight="72.0" prefWidth="54.0" text="В">
+            <Label layoutX="806.0" layoutY="652.0" prefHeight="72.0" prefWidth="54.0" text="В">
                <font>
                   <Font size="43.0" />
                </font>
             </Label>
-            <Button layoutX="761.0" layoutY="557.0" mnemonicParsing="false" onMouseClicked="#calculating" prefHeight="53.0" prefWidth="392.0" text="Рассчитать разность потенциалов:" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+            <Button layoutX="769.0" layoutY="384.0" mnemonicParsing="false" onMouseClicked="#calculating" prefHeight="45.0" prefWidth="361.0" text="Рассчитать разность потенциалов:" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
                <font>
                   <Font name="Bookshelf Symbol 7" size="20.0" />
                </font>
             </Button>
-            <Button layoutX="29.0" layoutY="774.0" mnemonicParsing="false" onMouseClicked="#backFromFirst" text="К условиям">
+            <ImageView fitHeight="25.0" fitWidth="165.0" layoutX="242.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/ruler.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="f1ToSee" fitHeight="90.0" fitWidth="473.0" layoutX="173.0" layoutY="556.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../img/ф11.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="f2ToSee" fitHeight="131.0" fitWidth="290.0" layoutX="705.0" layoutY="563.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../img/ф12.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="f3ToSee" fitHeight="109.0" fitWidth="438.0" layoutX="269.0" layoutY="643.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../img/ф13.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="textToSee" layoutX="160.0" layoutY="520.0" text="Напряжение и заряд внутри шара:" visible="false">
                <font>
-                  <Font name="Bookman Old Style" size="19.0" />
+                  <Font name="Bookman Old Style" size="24.0" />
                </font>
-            </Button>
+            </Label>
+            <TextField fx:id="d1" layoutX="1044.0" layoutY="236.0" prefHeight="38.0" prefWidth="79.0" ></TextField>
+            <TextField fx:id="d2" layoutX="1044.0" layoutY="314.0" prefHeight="38.0" prefWidth="79.0" />
          </children>
       </Pane>
    </children>

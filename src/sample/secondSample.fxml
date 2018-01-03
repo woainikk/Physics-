@@ -16,23 +16,23 @@
             <Image url="@../img/Безымянный1.png" />
          </image>
       </ImageView>
-      <Circle fx:id="bigCircle" fill="#e4e8eb" layoutX="239.0" layoutY="354.0" onMouseClicked="#getDistance" radius="170.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" />
-      <Circle fx:id="smallCircle" fill="#e4e8eb" layoutX="239.0" layoutY="354.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" />
-      <Circle layoutX="239.0" layoutY="354.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
-      <Slider fx:id="radiusSmall" blockIncrement="1.0" layoutX="1045.0" layoutY="130.0" majorTickUnit="1.0" max="5.0" minorTickCount="2" prefHeight="17.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="3.0" />
-      <Slider fx:id="radiusBig" blockIncrement="30.0" layoutX="1046.0" layoutY="200.0" majorTickUnit="2.0" max="12.0" min="2.0" prefHeight="44.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="6.0" />
-      <Slider fx:id="raznostPotents" blockIncrement="100.0" layoutX="1049.0" layoutY="315.0" majorTickUnit="1000.0" max="3000.0" prefHeight="44.0" prefWidth="193.0" showTickLabels="true" showTickMarks="true" value="1500.0" />
-      <Label layoutX="616.0" layoutY="114.0" text="Радиус центральной жилы, мм">
+      <Circle fx:id="bigCircle" fill="#e4e8eb" layoutX="244.0" layoutY="290.0" onMouseClicked="#getDistance" radius="170.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" />
+      <Circle fx:id="smallCircle" fill="#e4e8eb" layoutX="244.0" layoutY="290.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" />
+      <Circle layoutX="244.0" layoutY="290.0" radius="5.0" stroke="BLACK" strokeType="INSIDE" />
+      <Slider fx:id="radiusSmall" blockIncrement="5.0" layoutX="1046.0" layoutY="94.0" majorTickUnit="5.0" max="20.0" min="5.0" minorTickCount="2" prefHeight="10.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="8.0" />
+      <Slider fx:id="radiusBig" blockIncrement="30.0" layoutX="1046.0" layoutY="158.0" majorTickUnit="4.0" max="35.0" min="10.0" minorTickCount="1" prefHeight="44.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="20.0" />
+      <Slider fx:id="raznostPotents" blockIncrement="100.0" layoutX="1050.0" layoutY="251.0" majorTickUnit="1000.0" max="3000.0" min="1000.0" prefHeight="44.0" prefWidth="193.0" showTickLabels="true" showTickMarks="true" value="1500.0" />
+      <Label layoutX="572.0" layoutY="80.0" text="Радиус центральной жилы, мм, r">
          <font>
             <Font name="Bookman Old Style" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="746.0" layoutY="190.0" text="Радиус оболочки, мм">
+      <Label layoutX="702.0" layoutY="158.0" text="Радиус оболочки, мм, R">
          <font>
             <Font name="Bookman Old Style" size="26.0" />
          </font>
       </Label>
-      <Label layoutX="447.0" layoutY="435.0" text="Расстояние от центра до выбранной точки, мм" textAlignment="RIGHT">
+      <Label layoutX="448.0" layoutY="360.0" text="Расстояние от центра до выбранной точки, мм, d" textAlignment="RIGHT">
          <font>
             <Font name="Bookman Old Style" size="25.0" />
          </font>
@@ -42,35 +42,35 @@
             <Font name="Bookman Old Style" size="26.0" />
          </font>
       </Label>
-      <Label fx:id="chosenDistance" layoutX="1062.0" layoutY="414.0" prefHeight="52.0" prefWidth="79.0" style="-fx-border-color: #000;">
+      <Label fx:id="chosenDistance" layoutX="1123.0" layoutY="349.0" prefHeight="52.0" prefWidth="79.0" style="-fx-border-color: #000;">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <Button layoutX="838.0" layoutY="520.0" mnemonicParsing="false" onMouseClicked="#makeCalculate" prefHeight="72.0" prefWidth="303.0" text="Рассчитать напряжение">
+      <Button layoutX="880.0" layoutY="442.0" mnemonicParsing="false" onMouseClicked="#makeCalculate" prefHeight="65.0" prefWidth="303.0" text="Рассчитать напряжение">
          <font>
             <Font name="Bookman Old Style" size="22.0" />
          </font>
       </Button>
-      <Text layoutX="426.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Разность потенциалов между центральной жилой и оболочкой, В" textAlignment="RIGHT" wrappingWidth="596.41796875">
+      <Text layoutX="425.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Разность потенциалов между центральной жилой и оболочкой, В, U" textAlignment="RIGHT" wrappingWidth="596.41796875">
          <font>
             <Font name="Bookman Old Style" size="22.0" />
          </font>
       </Text>
-      <Label fx:id="secondAnswer" layoutX="989.0" layoutY="612.0" prefHeight="59.0" prefWidth="146.0" style="-fx-border-color: #000;">
+      <Label fx:id="secondAnswer" layoutX="789.0" layoutY="575.0" prefHeight="52.0" prefWidth="146.0" style="-fx-border-color: #000;">
          <font>
             <Font name="Bookman Old Style" size="21.0" />
          </font>
       </Label>
-      <Label layoutX="1146.0" layoutY="616.0" prefHeight="52.0" prefWidth="73.0" text="В/м">
+      <Label layoutX="935.0" layoutY="575.0" prefHeight="52.0" prefWidth="73.0" text="В/м">
          <font>
             <Font name="Bookman Old Style" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="30.0" layoutY="770.0" mnemonicParsing="false" onMouseClicked="#backFromSecond" text="К условиям">
-         <font>
-            <Font name="Bookman Old Style" size="18.0" />
-         </font>
-      </Button>
+      <ImageView fx:id="formula" fitHeight="129.0" fitWidth="604.0" layoutX="185.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../img/формул.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

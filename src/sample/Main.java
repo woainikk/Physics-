@@ -19,7 +19,7 @@ public class Main extends Application {
         Parent root = loader.load();
         ConditionController controller = loader.getController();
         controller.setPrStage(primaryStage);
-        primaryStage.setTitle("Solving Problems");
+        primaryStage.setTitle("Условия задач");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }

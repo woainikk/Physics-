@@ -18,6 +18,7 @@ public class ConditionController {
     public void makeFirstProblem(MouseEvent mouseEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         prStage.setScene(new Scene(root));
+        prStage.setTitle("Решение");
         prStage.show();
 
        /* FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
@@ -32,6 +33,7 @@ public class ConditionController {
     public void makeSecondProblem(MouseEvent mouseEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("secondSample.fxml"));
         prStage.setScene(new Scene(root));
+        prStage.setTitle("Решение");
         prStage.show();
     }
 
